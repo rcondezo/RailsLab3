@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="/formularios/ejercicio1">Ejercicio1 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/formularios/ejercicio2">Ejercicio2</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/formularios/ejercicio3">Ejercicio3</a>
+      </li>
+           <li class="nav-item">
+        <a class="nav-link" href="/formularios/ejercicio4">Ejercicio4</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/formularios/ejercicio5">Ejercicio5</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+Ejercicio 3
+
+<%= form_for :productos, :url => {:controller => "formularios", :action => "ejercicio3_post"}, :method => :post, :html => { :class => "form-horizontal" , :id => "form_producto"}  do |f| %>
+  
+  <h3>Operaciones aritméticas</h3>
+    <input type="number" name="opeA"/>
+    <input type="number" name="opeB"/>
+    <select name="operador">
+      <option value="1">Sumar</option>
+      <option value="2">Restar</option>
+      <option value="3">Multiplicar</option>
+      <option value="4">Dividir</option>
+    </select>
+    <input type="submit" value="Calcular"/>
+  <% end %>
+    
+  <%= @resultado %>

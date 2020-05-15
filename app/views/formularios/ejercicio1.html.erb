@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/formularios/ejercicio1">Ejercicio1 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/formularios/ejercicio2">Ejercicio2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/formularios/ejercicio3">Ejercicio3</a>
+      </li>
+           <li class="nav-item">
+        <a class="nav-link" href="/formularios/ejercicio4">Ejercicio4</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/formularios/ejercicio5">Ejercicio5</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+Ejercicio 1
+
+
+<%= form_for :producto, :url => {:controller => "formularios", :action => "ejercicio1_post"}, :method => :post, :html => { :class => "form-horizontal" , :id => "form_producto"}  do |f| %>
+<h3>Formulario 1</h3>
+  <div class="form-group">
+    <div class="col-sm-3">
+      <input type="text" class="form-control" placeholder="Ingrese nombre del producto" name="txt_nombre_producto">
+    </div>
+    <div class="col-sm-1">
+      <input type="number" class="form-control" placeholder="Ingrese precio del producto" name="num_precio_producto">
+    </div>
+    <div class="col-sm-2">
+      <input type="submit" value="Enviar"/>
+    </div>
+  </div>
+ <% end %>
+ <% if @txt_nombre_producto %>
+ <h4>
+   El nombre del producto es: <%= @txt_nombre_producto %> <br/>
+   El precio es: <%= @num_precio_producto %>
+ </h4>
+<% else %>
+ <% end %>
+
