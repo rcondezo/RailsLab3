@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'formularios/ejercicio1'
   post 'formularios/ejercicio1_post'
   get 'formularios/ejercicio2'
+  post 'formularios/ejercicio2_post'
   get 'formularios/ejercicio3'
   post 'formularios/ejercicio3_post'
   get 'formularios/ejercicio4'

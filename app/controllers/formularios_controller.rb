@@ -13,7 +13,18 @@ class FormulariosController < ApplicationController
   end
 
 
-  def ejercicio2
+  def ejercicio2_post
+     @par_impar = params[:par_impar]
+     Rails.logger.debug("--------------> " + @par_impar ) 
+
+     if @par_impar.to_i % 2 == 0
+        Rails.logger.debug("--------------> Es par ")  
+        @resultado = "Es par" 
+     else
+        Rails.logger.debug("--------------> Es impar ")           
+        @resultado = "Es impar" 
+     end
+     render "ejercicio2"
   end
 
   def ejercicio3

@@ -23,4 +23,21 @@
     </ul>
   </div>
 </nav>
+
 Ejercicio 2
+
+
+<%= form_for :ejercicio2, :url => {:controller => "formularios", :action => "ejercicio2_post"}, :method => :post, :html => { :class => "form-horizontal" , :id => "form_producto"}  do |f| %>
+  <h3>¿Es par o impar?</h3>
+  
+  Ingrese un número:  
+  <input type="number" name="par_impar" required/>
+  <input type="submit" value="Calcular"/>
+
+<% end %>
+
+<% if @resultado %>
+   <h4>
+     <%= @resultado %>
+   </h4>
+<% end %>
